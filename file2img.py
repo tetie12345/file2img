@@ -37,5 +37,5 @@ with open(sys.argv[1], "rb") as file:
     img = Image.new("RGB", size, "white")
 
     img.putdata(colors)
-    img.save("out.jpg")
+    img.save("test.jpg")
     #img.show()
