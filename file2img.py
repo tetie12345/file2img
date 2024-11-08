@@ -7,7 +7,7 @@ with open(sys.argv[1], "rb") as file:
     tick = 0
 
     for i in file.read():
-        if tick < 3:
+        if tick < 4:
             color.append(i)
             tick += 1
         else:
@@ -16,7 +16,7 @@ with open(sys.argv[1], "rb") as file:
             color = []
             color.append(i)
     if len(color) > 0:
-        while len(color) < 3:
+        while len(color) < 4:
             color.append(0)
         colors.append(tuple(color))
 
@@ -32,10 +32,10 @@ with open(sys.argv[1], "rb") as file:
             tick = 0
     size = (height, width)
 
-    #print(colors)
+    print(colors)
 
-    img = Image.new("RGB", size, "white")
+    img = Image.new("RGBA", size, "white")
 
     img.putdata(colors)
-    img.save("test.jpg")
+    img.save("test.png")
     #img.show()
