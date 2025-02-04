@@ -32,8 +32,6 @@ with open(sys.argv[1], "rb") as file:
             tick = 0
     size = (height, width)
 
-    print(colors)
-
     img = Image.new("RGBA", size, "white")
 
     img.putdata(colors)
